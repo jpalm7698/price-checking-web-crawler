@@ -1,0 +1,21 @@
+These xpath queries were found using the Selector Gadget Chrome Extension:
+https://selectorgadget.com/
+
+'''
+Get Title of Product on Product Page
+    This could also be used to determine if crawler is on a page for a single item listing.
+'''
+
+//*[(@id = "productTitle")]
+
+
+'''
+Get rating icon of product on product page
+    Represents a star rating out of 5.
+    The class name mentioned is a 4.5 star rating.
+'''
+
+//*[contains(concat( " ", @class, " " ), concat( " ", "a-star-4-5", " " ))]
+
+# Get text repr of rating
+//*[contains(concat( " ", @class, " " ), concat( " ", "a-star-4-5", " " ))]/span/text()
